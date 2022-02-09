@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=prog-micros_lab02_lg20168.X
+PROJECTNAME=prog-micros_lab03_lg20168.X
 
 # Active Configuration
 DEFAULTCONF=default

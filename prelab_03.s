@@ -7,7 +7,7 @@
 ; Hardware: 
 ;
 ; Creado: 7 feb, 2022
-; Última modificación: 4 feb, 2022
+; Última modificación: 9 feb, 2022
 
 ; PIC16F887 Configuration Bit Settings
 
