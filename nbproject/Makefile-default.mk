@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=prelab_03.s
+SOURCEFILES_QUOTED_IF_SPACED=prelab_03.s lab03_lg20168.s
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/prelab_03.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/prelab_03.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/prelab_03.o ${OBJECTDIR}/lab03_lg20168.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/prelab_03.o.d ${OBJECTDIR}/lab03_lg20168.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/prelab_03.o
+OBJECTFILES=${OBJECTDIR}/prelab_03.o ${OBJECTDIR}/lab03_lg20168.o
 
 # Source Files
-SOURCEFILES=prelab_03.s
+SOURCEFILES=prelab_03.s lab03_lg20168.s
 
 
 
@@ -103,6 +103,14 @@ ${OBJECTDIR}/prelab_03.o: prelab_03.s  nbproject/Makefile-${CND_CONF}.mk
 	prelab_03.s \
 	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp
 	
+${OBJECTDIR}/lab03_lg20168.o: lab03_lg20168.s  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/lab03_lg20168.o 
+	${MP_AS} -mcpu=PIC16F887 -c \
+	-o ${OBJECTDIR}/lab03_lg20168.o \
+	lab03_lg20168.s \
+	 -D__DEBUG=1  -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp
+	
 else
 ${OBJECTDIR}/prelab_03.o: prelab_03.s  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -110,6 +118,14 @@ ${OBJECTDIR}/prelab_03.o: prelab_03.s  nbproject/Makefile-${CND_CONF}.mk
 	${MP_AS} -mcpu=PIC16F887 -c \
 	-o ${OBJECTDIR}/prelab_03.o \
 	prelab_03.s \
+	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp
+	
+${OBJECTDIR}/lab03_lg20168.o: lab03_lg20168.s  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/lab03_lg20168.o 
+	${MP_AS} -mcpu=PIC16F887 -c \
+	-o ${OBJECTDIR}/lab03_lg20168.o \
+	lab03_lg20168.s \
 	 -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp
 	
 endif
