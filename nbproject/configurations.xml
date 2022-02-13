@@ -1134,6 +1134,8 @@
         <property key="linker-rom" value=""/>
         <property key="linker-serial" value=""/>
       </pic-as-linker>
+      <item path="prelab_03.s" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

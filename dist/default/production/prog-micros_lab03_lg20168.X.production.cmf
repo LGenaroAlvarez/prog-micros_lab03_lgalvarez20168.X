@@ -11,14 +11,11 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$build/default/production/prelab_03.o
-resVect CODE 0 0 0 3 2 1
-code CODE 0 0 0 130 2 1
-config CONFIG 4 2007 2007 2 2 1
 $build/default/production/lab03_lg20168.o
 resVect CODE 0 0 0 3 2 1
-code CODE 0 0 0 80 2 1
-HEX_INDEX CODE 0 0 0 13B 2 1
+code CODE 0 0 0 100 2 1
+udata_bank0 BANK0 1 20 20 3 1 1
+HEX_INDEX CODE 0 0 0 274 2 1
 config CONFIG 4 2007 2007 2 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -26,22 +23,22 @@ config CONFIG 4 2007 2007 2 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 20-6F 1
+RAM 23-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 20-6F 1
+BANK0 23-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 13B-1FFF 2
-ENTRY 13B-1FFF 2
+CONST 274-1FFF 2
+ENTRY 274-1FFF 2
 IDLOC 2000-2003 2
-CODE 13B-1FFF 2
+CODE 274-1FFF 2
 COMMON 70-7F 1
 EEDATA 2100-21FF 2
-STRCODE 13B-1FFF 2
-STRING 13B-1FFF 2
+STRCODE 274-1FFF 2
+STRING 274-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -55,112 +52,120 @@ STRING 13B-1FFF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$build/default/production/prelab_03.o
-0 resVect CODE >39:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-0 resVect CODE >41:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-2 resVect CODE >42:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-0 code CODE >45:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-100 code CODE >49:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-101 code CODE >50:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-102 code CODE >51:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-103 code CODE >56:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-104 code CODE >57:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-105 code CODE >59:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-106 code CODE >60:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-107 code CODE >61:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-108 code CODE >65:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-10A code CODE >66:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-10B code CODE >67:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-10C code CODE >68:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-10E code CODE >69:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-10F code CODE >70:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-111 code CODE >71:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-112 code CODE >72:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-113 code CODE >73:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-114 code CODE >74:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-115 code CODE >75:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-116 code CODE >79:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-118 code CODE >80:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-119 code CODE >81:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-11A code CODE >82:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-11B code CODE >83:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-11C code CODE >85:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-11D code CODE >88:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-11F code CODE >89:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-120 code CODE >90:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-121 code CODE >91:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-122 code CODE >92:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-123 code CODE >93:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-124 code CODE >95:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-126 code CODE >96:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-127 code CODE >97:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-128 code CODE >98:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-129 code CODE >99:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-12A code CODE >102:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-12C code CODE >103:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-12D code CODE >104:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-12E code CODE >105:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
-12F code CODE >106:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\prelab_03.s
 $build/default/production/lab03_lg20168.o
-0 HEX_INDEX CODE >49:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-100 HEX_INDEX CODE >52:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-101 HEX_INDEX CODE >53:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-102 HEX_INDEX CODE >54:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-103 HEX_INDEX CODE >55:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-104 HEX_INDEX CODE >56:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-105 HEX_INDEX CODE >57:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-106 HEX_INDEX CODE >58:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-107 HEX_INDEX CODE >59:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-108 HEX_INDEX CODE >60:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-109 HEX_INDEX CODE >61:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-10A HEX_INDEX CODE >62:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-10B HEX_INDEX CODE >63:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-10C HEX_INDEX CODE >64:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-10D HEX_INDEX CODE >65:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-10E HEX_INDEX CODE >69:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-10F HEX_INDEX CODE >70:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-110 HEX_INDEX CODE >71:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-112 HEX_INDEX CODE >75:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-113 HEX_INDEX CODE >76:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-114 HEX_INDEX CODE >77:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-115 HEX_INDEX CODE >78:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-116 HEX_INDEX CODE >80:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-117 HEX_INDEX CODE >81:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-118 HEX_INDEX CODE >82:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-119 HEX_INDEX CODE >83:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-11A HEX_INDEX CODE >87:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-11C HEX_INDEX CODE >88:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-11D HEX_INDEX CODE >89:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-11E HEX_INDEX CODE >91:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-120 HEX_INDEX CODE >92:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-121 HEX_INDEX CODE >93:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-122 HEX_INDEX CODE >94:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-123 HEX_INDEX CODE >95:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-124 HEX_INDEX CODE >96:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-126 HEX_INDEX CODE >97:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-127 HEX_INDEX CODE >98:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-128 HEX_INDEX CODE >99:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-129 HEX_INDEX CODE >100:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-12A HEX_INDEX CODE >101:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-12B HEX_INDEX CODE >102:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-12C HEX_INDEX CODE >106:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-12E HEX_INDEX CODE >107:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-12F HEX_INDEX CODE >108:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-130 HEX_INDEX CODE >109:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-131 HEX_INDEX CODE >110:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-132 HEX_INDEX CODE >111:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-133 HEX_INDEX CODE >114:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-134 HEX_INDEX CODE >115:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-135 HEX_INDEX CODE >117:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-136 HEX_INDEX CODE >118:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-137 HEX_INDEX CODE >121:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-138 HEX_INDEX CODE >122:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-139 HEX_INDEX CODE >124:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-13A HEX_INDEX CODE >125:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-0 resVect CODE >39:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-0 resVect CODE >41:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-2 resVect CODE >42:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
-0 code CODE >45:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+0 HEX_INDEX CODE >53:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+200 HEX_INDEX CODE >56:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+201 HEX_INDEX CODE >57:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+202 HEX_INDEX CODE >58:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+203 HEX_INDEX CODE >59:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+204 HEX_INDEX CODE >60:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+205 HEX_INDEX CODE >61:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+206 HEX_INDEX CODE >62:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+207 HEX_INDEX CODE >63:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+208 HEX_INDEX CODE >64:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+209 HEX_INDEX CODE >65:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+20A HEX_INDEX CODE >66:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+20B HEX_INDEX CODE >67:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+20C HEX_INDEX CODE >68:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+20D HEX_INDEX CODE >69:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+20E HEX_INDEX CODE >70:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+20F HEX_INDEX CODE >71:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+210 HEX_INDEX CODE >72:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+211 HEX_INDEX CODE >73:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+212 HEX_INDEX CODE >74:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+213 HEX_INDEX CODE >75:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+214 HEX_INDEX CODE >79:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+215 HEX_INDEX CODE >80:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+216 HEX_INDEX CODE >81:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+217 HEX_INDEX CODE >83:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+219 HEX_INDEX CODE >87:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+21A HEX_INDEX CODE >89:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+21B HEX_INDEX CODE >90:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+21C HEX_INDEX CODE >91:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+21D HEX_INDEX CODE >92:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+21E HEX_INDEX CODE >94:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+21F HEX_INDEX CODE >95:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+220 HEX_INDEX CODE >96:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+221 HEX_INDEX CODE >97:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+222 HEX_INDEX CODE >102:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+224 HEX_INDEX CODE >103:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+225 HEX_INDEX CODE >104:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+226 HEX_INDEX CODE >106:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+228 HEX_INDEX CODE >107:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+229 HEX_INDEX CODE >108:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+22A HEX_INDEX CODE >109:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+22B HEX_INDEX CODE >110:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+22C HEX_INDEX CODE >111:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+22D HEX_INDEX CODE >113:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+22F HEX_INDEX CODE >114:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+230 HEX_INDEX CODE >115:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+231 HEX_INDEX CODE >116:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+232 HEX_INDEX CODE >117:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+233 HEX_INDEX CODE >118:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+234 HEX_INDEX CODE >119:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+235 HEX_INDEX CODE >120:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+236 HEX_INDEX CODE >121:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+237 HEX_INDEX CODE >122:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+238 HEX_INDEX CODE >123:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+239 HEX_INDEX CODE >124:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+23A HEX_INDEX CODE >125:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+23B HEX_INDEX CODE >126:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+23C HEX_INDEX CODE >130:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+23E HEX_INDEX CODE >131:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+23F HEX_INDEX CODE >132:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+240 HEX_INDEX CODE >133:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+241 HEX_INDEX CODE >134:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+242 HEX_INDEX CODE >136:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+243 HEX_INDEX CODE >139:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+245 HEX_INDEX CODE >140:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+246 HEX_INDEX CODE >141:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+247 HEX_INDEX CODE >142:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+248 HEX_INDEX CODE >143:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+249 HEX_INDEX CODE >144:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+24A HEX_INDEX CODE >146:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+24C HEX_INDEX CODE >147:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+24D HEX_INDEX CODE >148:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+24E HEX_INDEX CODE >149:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+24F HEX_INDEX CODE >150:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+250 HEX_INDEX CODE >153:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+252 HEX_INDEX CODE >154:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+253 HEX_INDEX CODE >155:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+254 HEX_INDEX CODE >156:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+255 HEX_INDEX CODE >157:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+256 HEX_INDEX CODE >161:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+257 HEX_INDEX CODE >162:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+258 HEX_INDEX CODE >164:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+259 HEX_INDEX CODE >165:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+25A HEX_INDEX CODE >166:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+25B HEX_INDEX CODE >167:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+25C HEX_INDEX CODE >168:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+25D HEX_INDEX CODE >169:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+25E HEX_INDEX CODE >170:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+25F HEX_INDEX CODE >171:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+260 HEX_INDEX CODE >172:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+261 HEX_INDEX CODE >173:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+262 HEX_INDEX CODE >174:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+263 HEX_INDEX CODE >177:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+264 HEX_INDEX CODE >178:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+265 HEX_INDEX CODE >179:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+266 HEX_INDEX CODE >180:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+267 HEX_INDEX CODE >181:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+268 HEX_INDEX CODE >184:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+269 HEX_INDEX CODE >185:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+26A HEX_INDEX CODE >186:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+26B HEX_INDEX CODE >187:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+26C HEX_INDEX CODE >190:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+26D HEX_INDEX CODE >191:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+26E HEX_INDEX CODE >193:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+26F HEX_INDEX CODE >194:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+270 HEX_INDEX CODE >197:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+271 HEX_INDEX CODE >198:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+272 HEX_INDEX CODE >200:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+273 HEX_INDEX CODE >201:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+0 resVect CODE >43:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+0 resVect CODE >45:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+2 resVect CODE >46:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
+0 code CODE >49:C:\Users\luisg\MPLABXProjects\prog-micros_lab03_lg20168.X\lab03_lg20168.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -173,8 +178,8 @@ $build/default/production/lab03_lg20168.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-__Hspace_0 13B 0 ABS 0 - -
-__Hspace_1 0 0 ABS 0 - -
+__Hspace_0 274 0 ABS 0 - -
+__Hspace_1 23 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Hudata_bank0 0 0 ABS 0 udata_bank0 -
@@ -192,7 +197,7 @@ __Hdata 0 0 ABS 0 data -
 __Lcode 0 0 ABS 0 code -
 __Ldata 0 0 ABS 0 data -
 __S0 0 0 ABS 0 - -
-__S1 0 0 ABS 0 - -
+__S1 23 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __HresVect 0 0 ABS 0 resVect -
 __Lconfig 0 0 CONFIG 4 config -
@@ -232,6 +237,7 @@ __LHEX_INDEX 0 0 ABS 0 HEX_INDEX -
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
+udata_bank0 1 20 20 3 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
