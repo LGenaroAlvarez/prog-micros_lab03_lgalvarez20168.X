@@ -7,7 +7,7 @@
 ; Hardware: 7 SEGMENT DISPLAY
 ;
 ; Creado: 9 feb, 2022
-; Última modificación: 9 feb, 2022
+; Última modificación: 12 feb, 2022
 
 ; PIC16F887 Configuration Bit Settings
 
